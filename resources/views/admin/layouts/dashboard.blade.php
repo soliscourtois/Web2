@@ -9,7 +9,12 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Dashboard</title>
+  <title>NeuroLab - Dashboard</title>
+  
+  {{-- <script src="{{asset('js/jquery-3.3.1.js')}}"></script>
+  <script src="{{asset('js/jquery-ui.min.js')}}"></script>
+
+  <script src="{{asset('js/jquery.validate.js') }}"></script> --}}
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,13 +25,17 @@
   <!-- Custom styles for this template-->
   <link href="/css/admin/sb-admin.css" rel="stylesheet">
 
+  <!-- CKEditor-->
+  <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+
+
 </head>
 
 <body id="page-top">
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand mr-1" href="index.html">Dashboard</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -90,10 +99,30 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span>
+          <span>Inicio</span>
         </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('pacientes.index')}}">
+          <i class="fas fa-user"></i>
+          <span>Pacientes</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('medicinas.index')}}">
+          <i class="fas fa-capsules"></i>
+          <span>Medicinas</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="charts.html">
+          <i class="fas fa-list"></i>
+          <span>Registros del Día</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('directorio.index')}}">
+          <i class="fas fa-address-book"></i>
+          <span>Directorio</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -136,7 +165,7 @@
    <footer class="sticky-footer">
     <div class="container my-auto">
       <div class="copyright text-center my-auto">
-        <span>Copyright © Your Website 2019</span>
+        <span>Copyright © NeuroLab Guatemala 2020</span>
       </div>
     </div>
   </footer>
@@ -185,6 +214,7 @@
 
   <!-- Custom scripts for all pages-->
   <script src="/js/admin/sb-admin.js"></script>
+  <script src="{{asset('js/pacientes/create.js')}}"></script>
 
   <!-- Demo scripts for this page-->
   <script src="/js/admin/demo/datatables-demo.js"></script>
