@@ -52,7 +52,7 @@
                 <td>Serpento Asturias</td>
                 <td>7777-9999</td>
                 <td>99</td>
-                <td>Q.800.00</td>
+                <td>Q.801.00</td>
             </tr>
       </tbody>
     </table>
